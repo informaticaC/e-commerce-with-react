@@ -15,6 +15,7 @@ const CardProduct = ({ product }) => {
   //console.log(product)
   const handleBtnClick = (e) => {
     e.stopPropagation()
+    //console.log(product.id)
     const data = {
       quantity: 1,
       productId: product.id
@@ -28,14 +29,14 @@ const CardProduct = ({ product }) => {
       <header className="product__header">
         <img
           className="product__img product__img-1"
-          src={product.images[0].url}
+          src={product?.productImgs[0].url}
           alt=""
         />
-        <img
+        {/* <img
           className="product__img product__img-2"
-          src={product.images[1].url}
+          //src={product?.productImgs[1].url}
           alt=""
-        />
+        /> */}
       </header>
 
       <div className="product__body">

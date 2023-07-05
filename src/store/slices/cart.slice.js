@@ -15,7 +15,11 @@ import getConfigToken from "../../utils/getConfigToken";
  export const {setCartGlobal} = cartSlice.actions
 
  export const getAllProductsCartThunk = () => dispatch => { 
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'  // de la documentación sacamos la url del get
+    //const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'  // de la documentación sacamos la url del get
+    const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+  	
+    const url = `${URL_BASE}/cart`
+    
     axios.get(url, getConfigToken())
         .then(res =>  dispatch(setCartGlobal(res.data))) // al llamar a getAllProductsCartThunk() se guarda 
         .catch(err => console.log(err))

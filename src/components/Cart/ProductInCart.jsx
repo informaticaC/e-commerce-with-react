@@ -14,7 +14,7 @@ const { deleteProductFromCart } = useCrudCart()
   return (
     <article>
         <header>
-            <img src={prodCart.product.images[0].url} alt="" />
+            <img src={prodCart?.product?.productImgs[0]?.url} alt="" />
         </header>
         <section>
             <h3>{prodCart.product.title}</h3>

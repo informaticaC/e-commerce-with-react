@@ -4,7 +4,10 @@ import getConfigToken from "../utils/getConfigToken"
 import { useState } from "react"
 import axios from "axios"
 
-const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
+//const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
+const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+  	
+const url = `${URL_BASE}/purchase`
 
 const usePurchases = () => {
 
