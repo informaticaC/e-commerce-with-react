@@ -17,7 +17,7 @@ const usePurchases = () => {
     const buyThisCart = ()=> {
         axios.post(url, {}, getConfigToken())
             .then(res => {
-                console.log(res.data)
+                //console.log(res.data)
                 dispatch(getAllProductsCartThunk())
             })
             .catch(err => console.log(err))

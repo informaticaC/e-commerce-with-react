@@ -20,7 +20,8 @@ import React from 'react'
       axios.post(url,data)
         .then(res => {
           localStorage.setItem('token', res.data.token)
-          console.log(res.data)}
+          //console.log(res.data)
+        }
           )
         .catch(err => {
           console.log(err)

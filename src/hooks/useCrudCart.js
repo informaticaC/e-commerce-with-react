@@ -32,7 +32,7 @@ const useCrudCart= () => {
 
         axios.delete(url,getConfigToken())
             .then(res=> {
-                console.log(res.data)
+                //console.log(res.data)
                 dispatch(getAllProductsCartThunk())
 
             }) //res.status?
